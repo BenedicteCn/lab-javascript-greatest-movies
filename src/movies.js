@@ -22,7 +22,7 @@ console.log('Iteration 1:', getAllDirectors(movies))
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct?
 function howManyMovies(movies) {
   const steveMovies = movies.filter(movie => movie.director === "Steven Spielberg" && movie.genre.includes("Drama"))
-  return steveMovies
+  return parseInt(steveMovies)
 }
 
 console.log('Iteration 2:', howManyMovies(movies))
@@ -32,7 +32,7 @@ console.log('Iteration 2:', howManyMovies(movies))
 function scoresAverage(movies) {
   let reducedScore = movies.reduce(function (x, y) { return x + y.score
 }, 0);
-  return (reducedScore / movies.length).toFixed(2)
+  return parseInt((reducedScore / movies.length).toFixed(2))
 }
 
 console.log('Iteration 3:', scoresAverage(movies))
